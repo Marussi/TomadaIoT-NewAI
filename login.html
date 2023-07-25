@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomada IOT Login</title>
+
+    <style>
+
+        .NewAI{
+
+            font-family: Garamond;
+            font-weight: bold;
+            color:#AAB7BF;
+            font-size: 75px;
+            margin: 40px;
+            height: 0;
+            transform: translateY(100%);
+            
+            
+            border-radius: 25px;
+            
+        }
+
+        .box-login{
+
+            border-radius: 15px;
+            border-style: solid;
+            border-color: black;
+            color:white;
+            text-align: center;
+            border-width: 3px;
+            transform: translateY(180%);
+
+        }
+
+        .senha{
+
+            border-radius: 15px;
+            border-style: solid;
+            border-color: black;
+            color:#ffffff;
+            text-align: center;
+            border-width: 3px;
+            transform: translateY(180%);
+            color: black;
+            background-color: transparent;
+            backdrop-filter: blur(100px);
+            
+        }
+
+        .senha input::placeholder{
+
+            color:black
+        }
+
+        
+
+        .enviar{
+
+            background-color: gray;
+            border: none;
+            border-radius: 15px;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.5s;
+            transform: translateY(180%);
+        }
+
+        .enviar:hover{
+            background-color: rgb(218, 218, 218);
+            transition: 0.5s;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+
+        .enviar:active{
+            background-color: #686A6C;
+            transition: 0.5s;
+            border-color: white;
+            color: white;
+            cursor: pointer;
+        }
+
+        .Logo{
+
+            font-family: Snell Roundhand, cursive;
+            font-weight: bold;
+            color: #8c86a1;
+            font-size: 20px;
+            margin-top:100px;
+            height: 0;
+            border-radius: 20px;
+            background-color: transparent;
+            transform: translateY(180%);
+        }
+
+        *{
+            box-sizing: border-box;
+            background-image: url(city-skyline-morning-4k-ce.jpg) ;
+            background-size: cover;
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+        }
+
+        form{
+            height: 350px;
+            width: 400px;
+            margin: none ;
+            text-align: center;
+            background-color: transparent;
+            backdrop-filter: blur(24px);
+            border-radius: 50px;
+            border-width: 2px;
+            border-style: solid;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-right: 0;
+            margin-left: 0;
+            transform: translateY(30%) translateX(110%);
+
+             
+            
+            
+        }
+
+        input{
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+        }
+        
+
+        
+
+        
+
+    </style>
+
+</head>
+<body>
+    
+
+    <form>
+        
+
+        <p class="NewAI">NewAI</p>
+
+        
+
+        <p class="Logo">Login</p>
+        <input class= "box-login" type="text" placeholder="Login" id="login">
+        <input class="senha" type="password" placeholder="Senha" id="senha">
+        <input class="enviar" type="submit" onclick="logar(); return false">
+    
+
+
+
+    </form>
+
+
+    <script>
+
+
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('Sucesso');
+                location.href = "bemv.html";
+            }else{
+                alert('Usuario ou senha incorretos');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomada IOT Menu</title>
+
+
+
+<style>
+
+    body{
+        background-image: url("4K-Night-City-Photo3.jpg");
+        background-size: cover;
+        position: fixed;
+    }
+
+
+    form{
+        width: 300px;
+        margin-left: 0;
+        margin-right: 0;
+        margin: 0px auto;
+        text-align: center;
+       background-color: transparent;
+       border: black;
+       border-width: 2px;
+       border-radius: 15px;
+       backdrop-filter: blur(20px);
+       transform: translateY(20%) translateX(200%);
+       
+       
+    }
+
+
+    .BV{
+        font-size: 50px;
+        font-weight: bold;
+        font-family: DejaVu Sans Mono, monospace;
+        color: #e5ddf8;
+        margin: 0px;
+    }
+
+    .texto{
+        font-family: DejaVu Sans Mono, monospace;
+        font-size: 15px;
+        margin:25px;
+       
+        font-weight: bold;
+        border: rgb(161, 168, 224);
+        border-width: 2px;
+        border-radius: 10px;
+        height: 90px;
+        color: rgb(203, 168, 236);
+    }
+
+    .Ligar{
+        background-color: #444444;
+        height: 45px;
+        width: 210px;
+        font-weight: bold;
+        margin: 15px;
+        border: none;
+        border-radius: 22.5px;
+        color: rgb(161, 168, 224);
+        transition: 0.5s;
+    }
+
+    .Ligar:hover{
+
+        background-color: #6d6d6d;
+        transition: 0.5s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+
+    }
+
+    .Ligar:active{
+
+        background-color:rgb(161, 168, 224);
+        color:#444444;
+        cursor: pointer;
+    }
+
+    .Monitorar{
+        
+        background-color: #444444;
+        height: 45px;
+        width: 210px;
+        font-weight: bold;
+        margin: 15px;
+        border: none;
+        border-radius: 22.5px;
+        color:rgb(161, 168, 224);
+        transition: 0.5s;
+    }
+
+    .Monitorar:hover{
+
+        background-color: #6d6d6d;
+        transition: 0.5s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+
+    }
+
+    .Monitorar:active{
+
+        background-color:rgb(161, 168, 224);
+        color:#444444;
+        cursor: pointer;
+
+    }
+
+    .newaaI{
+        font-weight: bold;
+        font-size: 45px;
+        font-family: Garamond;
+        color:#c6e0f0;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        margin-left: 0;
+        margin-right: 0;
+       
+    
+    }
+
+    .nav{
+        position: relative;
+        height: 60px;
+        width: 423%;
+        z-index: 100;
+        padding:none;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin: 0;
+        background-color: transparent;
+        margin-bottom: 60px;
+        backdrop-filter: blur(20px);
+        border: 2px black;
+        border-radius: 28px;
+        
+    }
+
+    .dedo{
+        
+        max-width: 1100px;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+
+    .nav_itens{
+
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+        column-gap: 0px;
+
+    }
+    .contact:hover{
+        color: #e7e7e7;
+        transition: 0.5s;
+       
+
+    }
+    .contact{
+        color:#9c9c9c;
+        text-decoration: none;
+        font-family: Comic Sans MS, Comic Sans, cursive;
+        font-size: 15px;
+        transition: 0.5s;
+    }
+
+    .loguei{
+        height: 40px;
+        width: 70px;
+        background-color: #444444;
+        color:rgb(161, 168, 224);
+        border-radius: 20px;
+        border:none;
+        font-family: arial;
+        font-weight: bold;
+    }
+    .loguei:hover{
+        background-color: #6d6d6d;
+        transition: 0.5s;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+
+    }
+
+    .loguei:active{
+        background-color:rgb(161, 168, 224);
+        color:#444444;
+        cursor: pointer;
+    }
+
+    
+
+</style>
+
+    </head>
+
+    <body>
+
+        <nav class="nav">
+
+            <ul class="dedo">
+
+                <ul class="nav_itens">
+                    
+
+                    
+
+       
+        <p class="newaaI">NewAI</p>
+        <a class= "contact" href="#">contact</a>
+        <a class= "contact" href="#">services</a>
+        <button class="loguei" onclick="login(); return false">Login</button>
+
+                     
+
+                </ul>
+
+            </ul>
+
+        </nav>
+
+        <form>
+
+          
+            <p class="BV"> Bem Vindo! </p>
+            <p class="texto">Obrigado por utilizar nosso produto, nessa sessão você poderá desligar, ou ligar seu IOT, e também monitorar os custos gerados pela energia gasta!</p>
+
+             <button class="Ligar" onclick="ligar(); return false">Ligar Tomada IOT</button>
+             <button class="Monitorar" onclick="monitorar(); return false">Monitoramento de custo</button>
+
+       
+        </form>
+
+        <script>
+            function ligar(){
+                location.href = "index.html";
+            }
+
+            function monitorar(){
+                location.href ="pzem.html";
+            }
+
+            function login(){
+                location.href = "login.html";
+            }
+        </script>
+        
+    </body>
+
+ 
+
+</html>
