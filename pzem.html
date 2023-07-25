@@ -302,9 +302,9 @@ input[type="text"] {
         if(snapshot.exists()){
           secbox.value = snapshot.val().Tensão.;
           rollbox.value = snapshot.val().Corrente;
-          esp.value = parseFloat(snapshot.val().Potência.toFixed(2));
+          esp.value =snapshot.val().Potência;
           kwh.value = snapshot.val().kWh;
-          gasto.value = parseFloat(snapshot.val().Custo.toFixed(2));
+          gasto.value = snapshot.val().Custo;
           frequencia.value = snapshot.val().Frequência;
           FatorP.value = snapshot.val().FatorPotência;
 
