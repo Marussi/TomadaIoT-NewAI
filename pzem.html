@@ -300,7 +300,7 @@ input[type="text"] {
 
       get(child(dbref, "Tomada IOT/")).then((snapshot)=>{
         if(snapshot.exists()){
-          secbox.value = snapshot.val().Tensão.;
+          secbox.value = snapshot.val().Tensão;
           rollbox.value = snapshot.val().Corrente;
           esp.value =snapshot.val().Potência;
           kwh.value = snapshot.val().kWh;
