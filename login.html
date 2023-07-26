@@ -12,7 +12,7 @@
 
             font-family: Garamond;
             font-weight: bold;
-            color:#AAB7BF;
+            color:#ccdbe6;
             font-size: 75px;
             margin: 40px;
             height: 0;
@@ -25,25 +25,27 @@
 
         .box-login{
 
+            background-color: transparent;
+            backdrop-filter: blur(40px);
+            border-width: 1px;
+            border-color: #686A6C;
             border-radius: 15px;
             border-style: solid;
-            border-color: black;
             color:white;
             text-align: center;
-            border-width: 3px;
-            transform: translateY(180%);
+            transform: translateY(120%);
 
         }
 
         .senha{
 
-            border-radius: 15px;
+            background-color: transparent;
+            backdrop-filter: blur(40px);
+            border-width: 1px;
             border-style: solid;
-            border-color: black;
-            color:#ffffff;
+            border-radius: 15px;
             text-align: center;
-            border-width: 3px;
-            transform: translateY(180%);
+            transform: translateY(130%);
             color: black;
             background-color: transparent;
             backdrop-filter: blur(100px);
@@ -59,17 +61,20 @@
 
         .enviar{
 
-            background-color: gray;
-            border: none;
+            background-color: white;
+            border:none;
             border-radius: 15px;
             font-family: Arial;
             font-weight: bold;
             transition: 0.5s;
-            transform: translateY(180%);
+            width: 260px;
+            transform: translateY(170%);
         }
 
         .enviar:hover{
-            background-color: rgb(218, 218, 218);
+            border: none;
+            background-color: rgb(179, 179, 179);
+            color:white;
             transition: 0.5s;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
             cursor: pointer;
@@ -85,26 +90,31 @@
 
         .Logo{
 
-            font-family: Snell Roundhand, cursive;
+            font-family:Trebuchet MS;
             font-weight: bold;
-            color: #8c86a1;
+            color: #afafaf;
             font-size: 20px;
             margin-top:100px;
             height: 0;
             border-radius: 20px;
             background-color: transparent;
-            transform: translateY(180%);
+            transform: translateY(120%);
         }
 
-        *{
+        body{
             box-sizing: border-box;
             background-image: url(city-skyline-morning-4k-ce.jpg) ;
             background-size: cover;
+            width: 99%;
+            height: 100%;
+            position:fixed;
+            
         }
 
         body{
             width: 100%;
             height: 100%;
+           
         }
 
         form{
@@ -113,9 +123,10 @@
             margin: none ;
             text-align: center;
             background-color: transparent;
-            backdrop-filter: blur(24px);
-            border-radius: 50px;
-            border-width: 2px;
+            backdrop-filter: blur(6.5px);
+            border-radius: 15px;
+            border-width: 1px;
+            border-color: #686A6C;
             border-style: solid;
             margin-top: 0;
             margin-bottom: 0;
