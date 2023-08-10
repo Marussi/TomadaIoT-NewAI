@@ -29,6 +29,7 @@
             color:#6fc6e9;
             font-size: 30px;
 }
+
 .Moni{
   font-family: Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
@@ -46,7 +47,7 @@
 .serv{
   transform: translateY(-140%) translateX(240%);
   text-decoration: none;
-        font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color:#6fc6e9;
         transition: 0.5s;
 }
@@ -60,7 +61,7 @@
 .cont{
   transform: translateY(-1%) translateX(-30%);
   text-decoration: none;
-        font-family: Comic Sans MS, Comic Sans, cursive;
+  font-family: Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color:#6fc6e9;
         transition: 0.5s;
 }
@@ -89,6 +90,10 @@ justify-content: space-between;
   padding-left: 15px;
   font-family: Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
+  transition: 0.5s;
+}
+.Sob:hover{
+  color: #858585;
 }
 .Duv{
   text-decoration: none;
@@ -96,6 +101,10 @@ justify-content: space-between;
   padding-left: 15px;
   font-family:Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
+  transition: 0.5s;
+}
+.Duv:hover{
+  color: #858585;
 }
 .Com{
   text-decoration: none;
@@ -103,13 +112,22 @@ justify-content: space-between;
   padding-left: 15px;
   font-family: Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
+  transition: 0.5s;
 }
+.Com:hover{
+  color: #858585;
+}
+
 .Config{
   text-decoration: none;
   color: #fff;
   padding-left: 15px;
   font-family:Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
+  transition: 0.5s;
+}
+.Config:hover{
+  color: #858585;
 }
 .Ajuda{
   text-decoration: none;
@@ -117,12 +135,17 @@ justify-content: space-between;
   padding-left: 15px;
   font-family: Monospace, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
+  transition: 0.5s;
+}
+.Ajuda:hover{
+  color: #858585;
 }
 .coco{
   margin-bottom: 75px;
   padding-left: 15px;
   
 }
+
 .vov{
   margin-bottom: 75px;
   padding-left: 15px;
@@ -141,6 +164,7 @@ justify-content: space-between;
 .lll{
   
   padding-left: 15px;
+  display: flex;
 }
 .geral1{
   position:absolute;
@@ -287,7 +311,7 @@ body{
   font-family: Georgia, serif;
 }
 .Potencia{
-  ffont-family: Georgia, serif;
+  font-family: Georgia, serif;
 }
 .KWH{
   font-family: Georgia, serif;
@@ -299,12 +323,14 @@ body{
   font-family: Georgia, serif;
 }
 .oioi{
-  margin-left: 60px;
+  margin-left: 20px;
   background-color: #fff;
   position: absolute;
-  width: 310px;
+  width: 540px;
   border-radius: 10px;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.2);
+  display:flex;
+  align-items: center;
 }
 .iop{
   background-color: #fff;
@@ -315,8 +341,19 @@ body{
   margin-right: 40px;
 }
 
+.oig{
+  display: flex;
+  background-color: #fff;
+}
+.tx{
+transform: translateX(150%);
+background-color: #fff;
 
-
+box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.2);
+}
+.peu{
+  display: flex;
+}
 </style>
 
 
@@ -425,16 +462,15 @@ body{
   <div class ="ioio">
     <div class="oioi">
       
-     <div style="width: 400px; height: 300px;">
-       <canvas id="myChart" style="width: 50px; height: 50px;"></canvas>
-       <canvas id="dedo" style="width: 50px; height: 50px;"></canvas>
-       
+     <div class="oig" style="width: 1000px; height: 300px;">
+     
+       <canvas id="myChart" style="width: 900px; height: 500px;"></canvas>
+ 
      </div>
    </div>
    
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <script src="https://kit.fontawesome.com/c5c81fc5e1.js" crossorigin="anonymous"></script>
-   
      <script>
        const ctx = document.getElementById('myChart');
      
@@ -459,10 +495,44 @@ body{
            }
          }
        });
+
      </script>
-  </div>
+<div class= "peu"style="width: 400px; height: 500px;">
+<canvas class ="tx" id="dedo" style="width: 400px; height: 800px;"></canvas>
+</div>
+<script>
+  const xtc = document.getElementById('dedo');
+
+  new Chart(xtc, {
+    type: 'doughnut',
+    data: {
+      labels: ['Junho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+      datasets: [{
+        label: 'Gasto Mensal em Reais',
+        data: [0.07, 0.02, 0, 0, 0, 0],
+        borderWidth: 1,
+        
+        
+        
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+</div>
+</div>
  
+
   
+  
+ 
   <script type="module">
     
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
