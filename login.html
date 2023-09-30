@@ -1,198 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tomada IOT Login</title>
-
-    <style>
-
-        .NewAI{
-
-            font-family: Garamond;
-            font-weight: bold;
-            color:#ccdbe6;
-            font-size: 75px;
-            margin: 40px;
-            height: 0;
-            transform: translateY(100%);
-            
-            
-            border-radius: 25px;
-            
-        }
-
-        .box-login{
-
-            background-color: transparent;
-            backdrop-filter: blur(40px);
-            border-width: 1px;
-            border-color: #686A6C;
-            border-radius: 15px;
-            border-style: solid;
-            color:white;
-            text-align: center;
-            transform: translateY(120%);
-
-        }
-
-        .senha{
-
-            background-color: transparent;
-            backdrop-filter: blur(40px);
-            border-width: 1px;
-            border-style: solid;
-            border-radius: 15px;
-            text-align: center;
-            transform: translateY(130%);
-            color: black;
-            background-color: transparent;
-            backdrop-filter: blur(100px);
-            
-        }
-
-        .senha input::placeholder{
-
-            color:black
-        }
-
-        
-
-        .enviar{
-
-            background-color: white;
-            border:none;
-            border-radius: 15px;
-            font-family: Arial;
-            font-weight: bold;
-            transition: 0.5s;
-            width: 260px;
-            transform: translateY(170%);
-        }
-
-        .enviar:hover{
-            border: none;
-            background-color: rgb(179, 179, 179);
-            color:white;
-            transition: 0.5s;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-            cursor: pointer;
-        }
-
-        .enviar:active{
-            background-color: #686A6C;
-            transition: 0.5s;
-            border-color: white;
-            color: white;
-            cursor: pointer;
-        }
-
-        .Logo{
-
-            font-family:Trebuchet MS;
-            font-weight: bold;
-            color: #afafaf;
-            font-size: 20px;
-            margin-top:100px;
-            height: 0;
-            border-radius: 20px;
-            background-color: transparent;
-            transform: translateY(120%);
-        }
-
-        body{
-            box-sizing: border-box;
-            background-image: url(city-skyline-morning-4k-ce.jpg) ;
-            background-size: cover;
-            width: 99%;
-            height: 100%;
-            position:fixed;
-            
-        }
-
-        body{
-            width: 100%;
-            height: 100%;
-           
-        }
-
-        form{
-            height: 350px;
-            width: 400px;
-            margin: none ;
-            text-align: center;
-            background-color: transparent;
-            backdrop-filter: blur(6.5px);
-            border-radius: 15px;
-            border-width: 1px;
-            border-color: #686A6C;
-            border-style: solid;
-            margin-top: 0;
-            margin-bottom: 0;
-            margin-right: 0;
-            margin-left: 0;
-            transform: translateY(30%) translateX(110%);
-
-             
-            
-            
-        }
-
-        input{
-            display: block;
-            margin: 10px auto;
-            width: 250px;
-            height: 30px;
-        }
-        
-
-        
-
-        
-
-    </style>
-
+    <title>NewAI Home Page</title>
+    <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">NewAI</h2>
+            </div>
 
-    <form>
-        
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">DESING</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
 
-        <p class="NewAI">NewAI</p>
+            <div class="search">
+                <input class="srch" type="text" name="" placeholder="Type To Text">
+                <a href="#"> <button class="btn">Search</button> </a>
+            </div>
 
-        
+        </div>
+        <div class="content">
+            <h1> IoT System & <br><span>Monitoring</span> <br>Data</h1>
+            <p class="par">The NewAI is the future of the automation.<br> You're Welcome to the future.</p>
 
-        <p class="Logo">Login</p>
-        <input class= "box-login" type="text" placeholder="Login" id="login">
-        <input class="senha" type="password" placeholder="Senha" id="senha">
-        <input class="enviar" type="submit" onclick="logar(); return false">
-    
+            <button class="cn"><a href="#">JOIN US</a></button>
 
+            <div class="form">
+                <h2>Login Here</h2>
+                <input type="email" name="email" placeholder="Enter email Here" id="login">
+                <input type="password" name="password" placeholder="Enter Password Here" id="senha">
+                <button onclick="logar(); return false" class="btnn"><a href="#">Login</a></button>
 
-
-    </form>
-
+                <p class="link">Don't have an account<br>
+                <a href="#">Sing up </a> Here</a></p>
+                <p class="liw">Log in with</p>
+            </div>
+        </div>
+    </div>
 
     <script>
+            function logar(){
 
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
 
-        function logar(){
-
-            var login = document.getElementById('login').value;
-            var senha = document.getElementById('senha').value;
-
-            if(login == "admin" && senha == "admin"){
-                
-                location.href = "bemv.html";
-            }else{
-                alert('Usuario ou senha incorretos');
-            }
-
+        if(login == "admin" && senha == "admin"){
+            
+            location.href = "acess.html";
+        }else{
+            alert('Usuario ou senha incorretos');
         }
 
+        }
     </script>
 
 </body>
 </html>
+
